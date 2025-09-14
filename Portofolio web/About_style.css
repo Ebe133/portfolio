@@ -1,0 +1,330 @@
+/* --- Verbeterde typografie en Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Open Sans', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    background-color: #f9f7f7;
+    color: #222;
+}
+
+/* --- Warm en vriendelijk kleurenpalet --- */
+:root {
+    --main-bg: #fff8f0;
+    --accent: #ff914d;
+    --accent-dark: #ff5e13;
+    --accent-light: #ffe0cc;
+    --text-main: #2d2d2d;
+    --text-light: #fff;
+    --card-bg: #fff;
+    --card-border: #ffd6b3;
+    --footer-bg: #2d2d2d;
+    --footer-accent: #ff914d;
+    --button-hover: #ff5e13;
+    --button-hover-text: #fff;
+}
+body {
+    background-color: var(--main-bg);
+    color: var(--text-main);
+}
+header {
+    background-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(255, 145, 77, 0.08);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--accent-dark);
+    color: var(--text-light);
+}
+
+/* Hero sectie */
+#hero {
+    height: 100vh;
+    background: linear-gradient(120deg, var(--accent-light) 0%, var(--main-bg) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    color: var(--accent-dark);
+    margin: 0;
+}
+
+.hero-text img {
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+.hero-text p {
+    font-size: 1.4em;
+    color: var(--accent-dark);
+    margin-top: 20px;
+}
+
+.cta {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--accent) 60%, var(--accent-light) 100%);
+    color: var(--text-main);
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin-top: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background 0.3s ease;
+    border: 2px solid var(--accent);
+}
+
+.cta:hover {
+    background: var(--button-hover);
+    color: var(--button-hover-text);
+    border-color: var(--accent-dark);
+}
+
+/* Over Mij */
+#about {
+    padding: 80px 20px;
+    background-color: var(--card-bg);
+    text-align: center;
+}
+
+#about h2 {
+    color: var(--accent-dark);
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2em;
+    color: #333;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Vaardigheden */
+#skills {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#skills h2 {
+    color: var(--accent-dark);
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+#skills ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+}
+
+#skills ul li {
+    background-color: var(--accent-light);
+    color: var(--text-main);
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: transform 0.5s ease-in-out;
+    border: 1px solid var(--card-border);
+}
+
+#skills ul li:hover {
+    transform: scale(1.05);
+}
+
+.skill-bar {
+    background-color: var(--card-border);
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: var(--accent);
+}
+
+/* Projecten */
+#projects {
+    padding: 80px 20px;
+    background-color: var(--card-bg);
+    text-align: center;
+}
+
+#projects h2 {
+    color: var(--accent-dark);
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+/* --- Projecten grid cards met schaduw en hover --- */
+.project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.project-grid img {
+    max-width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+    margin-right: 20px;
+    align-self: flex-start;
+}
+.project-grid fieldset {
+    background: var(--card-bg);
+    color: var(--text-main);
+    border: 1.5px solid var(--accent-light);
+    box-shadow: 0 4px 16px rgba(255, 145, 77, 0.10);
+    padding: 25px 30px;
+    min-width: 220px;
+    margin-bottom: 20px;
+    transition: transform 0.25s, box-shadow 0.25s, border 0.25s;
+}
+.project-grid fieldset:hover {
+    border: 1.5px solid var(--accent);
+    background: var(--accent-light);
+}
+.project-grid fieldset a {
+    color: var(--accent-dark);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.15em;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+.project-grid fieldset a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+/* Contact */
+#contact {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#contact h2 {
+    color: var(--accent-dark);
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+/* --- Buttons en links consistenter --- */
+.cta, .contact-btn {
+    background: linear-gradient(90deg, var(--accent) 60%, var(--accent-light) 100%);
+    color: var(--text-main);
+    padding: 15px 36px;
+    border-radius: 6px;
+    font-size: 1.15em;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    border: 2px solid var(--accent);
+    margin-top: 18px;
+    display: inline-block;
+}
+.cta:hover, .contact-btn:hover {
+    background: var(--button-hover);
+    color: var(--button-hover-text);
+    border-color: var(--accent-dark);
+}
+
+/* Footer */
+footer {
+    padding: 28px 0 10px 0;
+    background: var(--footer-bg);
+    color: var(--text-light);
+    text-align: center;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    margin-top: 40px;
+}
+footer p {
+    margin: 0 0 8px 0;
+    font-size: 1em;
+}
+
+.social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.social-links a {
+    color: var(--footer-accent);
+    font-size: 1.15em;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 5px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.social-links a:hover {
+    background: var(--footer-accent);
+    color: var(--footer-bg);
+}
+
+/* --- Responsiviteit --- */
+@media (max-width: 900px) {
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    #skills ul {
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+@media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .hero-text h1 {
+        font-size: 2em;
+    }
+    .project-grid img {
+        max-width: 100%;
+        margin: 0 0 18px 0;
+    }
+    .project-grid fieldset {
+        min-width: 0;
+        width: 90vw;
+        padding: 18px 8px;
+    }
+    #about, #skills, #projects, #contact {
+        padding: 40px 8px;
+    }
+}
+
